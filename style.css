@@ -374,3 +374,25 @@ section p strong {
 section:last-of-type {
     margin-bottom: 0;
 }
+
+/* ---------- Technical Expertise ---------- */
+
+.skills-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.skills{
+    width:100%;
+    max-width:650px;      /* makes it narrower */
+}
+
+.skills p{
+    margin:16px 0;
+    line-height:1.8;
+}
+
+.skills strong{
+    color:var(--text);
+}
