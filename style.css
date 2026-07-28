@@ -363,3 +363,14 @@ footer{
     }
 
 }
+section p {
+    margin: 10px 0;
+}
+
+section p strong {
+    display: inline;
+}
+
+section:last-of-type {
+    margin-bottom: 0;
+}
