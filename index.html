@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kumbha Nagaswetha</title>
+<meta content="Kumbha Nagaswetha — Senior Data Scientist at Atlas Copco Group. Research in signal processing, deep learning, and scientific machine learning." name="description"/>
+<link href="data:," rel="icon"/>
+<style>
+    :root {
+      --bg: #fcfbf8;
+      --text: #1a1a1a;
+      --meta: #6a6a6a;
+      --accent: #264653;
+      --accent-hover: #1b3640;
+      --rule: #e6e2d9;
+      --measure: 720px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap {
+      max-width: var(--measure);
+      margin: 0 auto;
+      padding: 64px 32px 96px;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 44px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .header-text {
+      min-width: 0;
+    }
+
+    .photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: var(--rule);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin: 0 0 6px;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      color: var(--meta);
+      font-size: 15px;
+      margin: 0 0 18px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 1px;
+      transition: border-color 0.15s ease;
+    }
+
+    .links a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      margin-top: 44px;
+    }
+
+    h2 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--meta);
+      margin: 0 0 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section p {
+      margin: 0 0 14px;
+    }
+
+    section a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s ease;
+    }
+
+    section a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* Research interests */
+    .interests {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .interests li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .interests li:last-child {
+      border-bottom: none;
+    }
+
+    .interests strong {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .interests .desc {
+      color: var(--meta);
+      font-size: 15px;
+    }
+
+    /* Education, experience — key/value rows */
+    .row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .row:last-child { border-bottom: none; }
+
+    .row-main strong {
+      font-weight: 600;
+    }
+
+    .row-main .sub {
+      display: block;
+      color: var(--meta);
+      font-size: 15px;
+      margin-top: 2px;
+    }
+
+    .row-date {
+      color: var(--meta);
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+
+    /* Publications */
+    .pub {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .pub:last-child { border-bottom: none; }
+
+    .pub-title {
+      font-weight: 600;
+      margin: 0 0 4px;
+    }
+
+    .pub-authors {
+      color: var(--text);
+      font-size: 15px;
+      margin: 0 0 4px;
+    }
+
+    .pub-venue {
+      color: var(--meta);
+      font-size: 14px;
+      font-style: italic;
+      margin: 0 0 6px;
+    }
+
+    .pub-links {
+      font-size: 14px;
+    }
+
+    .pub-links a {
+      margin-right: 14px;
+    }
+
+    .status {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: var(--rule);
+      color: var(--meta);
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: 1px;
+    }
+
+    /* Projects */
+    .project {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .project:last-child { border-bottom: none; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    .project-title {
+      font-weight: 600;
+    }
+
+    .project-date {
+      color: var(--meta);
+      font-size: 14px;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .project-desc {
+      color: var(--text);
+      font-size: 15px;
+      margin: 0;
+    }
+
+    /* Contact */
+    .contact p {
+      color: var(--meta);
+      font-size: 15px;
+    }
+
+    /* Focus and accessibility */
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-bottom-color: transparent;
+      border-radius: 2px;
+    }
+
+    /* Responsive */
+    @media (max-width: 560px) {
+      .wrap { padding: 40px 20px 64px; }
+      h1 { font-size: 24px; }
+      .links { gap: 14px; }
+      header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .photo {
+        width: 110px;
+        height: 110px;
+      }
+      .row { grid-template-columns: 1fr; }
+      .row-date { padding-top: 0; }
+      .project-header { flex-direction: column; gap: 2px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="header-text">
+<h1>Kumbha Nagaswetha</h1>
+<p class="tagline">
+          Senior Data Scientist, Atlas Copco Group · M.Tech, IISc Bangalore
+        </p>
+<div class="links">
+<li>
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:nagaswethak@alum.iisc.ac.in">
+        nagaswethak@alum.iisc.ac.in
+    </a>
+</li>
+<a href="https://scholar.google.com/citations?user=wSDCzEIAAAAJ" rel="noopener" target="_blank">Google Scholar</a>
+<a href="https://www.linkedin.com/in/kumbha-nagaswetha-83bba6205/" rel="noopener" target="_blank">LinkedIn</a>
+<a href="https://github.com/kumbha-gthub" rel="noopener" target="_blank">GitHub</a>
+<a href="CV_Kumbha_Nagaswetha.pdf" rel="noopener" target="_blank">CV</a>
+</div>
+</div>
+<img alt="Kumbha Nagaswetha" class="photo" src="photo.jpeg"/>
+</header>
+<section id="about">
+<h2>About</h2>
+<p>I work at the intersection of signal processing, deep learning, and computer vision, with a focus on building learning systems that remain reliable under distribution shift and that translate cleanly from research to real-world deployment. I earned my M.Tech in Signal Processing from the Indian Institute of Science (IISc), Bangalore, and my B.Tech in Electronics and Communication Engineering from JNTU Kakinada. Since 2022, I have been working as a Senior Data Scientist at Atlas Copco Group, developing machine learning solutions for machine health monitoring, scientific machine learning, surrogate-based design optimization, and industrial AI applications.</p>
+<p>My technical interests span deep learning architectures including convolutional neural networks (CNNs), GANs, Transformers, Vision Transformers, Graph Neural Networks, Neural Operators, and Physics-Informed Neural Networks. More broadly, I work on signal processing, image processing, optimization, Bayesian optimization, anomaly detection, domain adaptation, and interpretable machine learning using techniques such as t-SNE and SHAP.
+</p>
+</section>
+<section id="research">
+<h2>Research Interests</h2>
+<p>My research interests include <strong>scientific machine learning</strong>, including neural operators, physics-informed learning, surrogate modeling, and Bayesian optimization for engineering systems, as well as <strong>computer vision and perception</strong> for reliable learning under domain shifts and safety-critical environments. I am particularly interested in developing machine learning methods that combine physical knowledge with data-driven models to improve robustness, generalization, and interpretability.</p>
+<ul class="interests">
+<li>
+<strong>Scientific machine learning</strong>
+<span class="desc">Neural operators, physics-informed methods, and surrogate modeling for engineering design and simulation.</span>
+</li>
+<li>
+<strong>Perception and learning for autonomous driving</strong>
+<span class="desc">Reliable and interpretable computer vision under sensing uncertainty, out-of-distribution conditions, and safety-critical deployment.</span>
+</li>
+<li>
+<strong>Robust and structure-aware representation learning</strong>
+<span class="desc">Domain adaptation, generalization under sensor and operating-condition shifts, inductive biases that respect physical structure.</span>
+</li>
+<li>
+<strong>Bayesian and probabilistic methods</strong>
+<span class="desc">Batch Bayesian optimization, uncertainty quantification, and the theoretical properties of surrogate models used in expensive black-box optimization.</span>
+</li>
+</ul>
+</section>
+<section id="education">
+<h2>Education</h2>
+<div class="row">
+<div class="row-main">
+<strong>M.Tech, Signal Processing</strong>
+<span class="sub">Indian Institute of Science, Bangalore · CGPA 7.0</span>
+</div>
+<div class="row-date">2020 – 2022</div>
+</div>
+<div class="row">
+<div class="row-main">
+<strong>B.Tech, Electronics and Communication Engineering</strong>
+<span class="sub">Jawaharlal Nehru Technological University, Kakinada · CGPA 8.27</span>
+</div>
+<div class="row-date">2016 – 2020</div>
+</div>
+</section>
+<section id="publications">
+<h2>Publications and Manuscripts</h2>
+<div class="pub">
+<div class="pub-title">
+          Efficient Conditioning: Why Pseudo-Observation Batch Bayesian Optimization Works (When It Doesn't)
+          <span class="status">Under Review</span>
+</div>
+<div class="pub-authors">Kumbha Nagaswetha</div>
+<div class="pub-venue">Submitted to NeurIPS 2026</div>
+<div class="pub-desc" style="color: var(--meta); font-size: 14px;">
+          Identifies <em>efficient conditioning</em> as the surrogate property that makes Constant Liar,
+          Kriging Believer, and fantasy models produce diverse batches under Gaussian Process surrogates
+          while parametric surrogates collapse. Proves an Ω(ℓ) separation guarantee and validates across
+          Hartmann-6D, Ackley-8D, Levy-10D, and SVM hyperparameter tuning.
+        </div>
+</div>
+
+<div class="pub">
+<div class="pub-title">
+          HDR Image Reconstruction using Unsupervised Learning
+        </div>
+<div class="pub-authors">Kumbha Nagaswetha</div>
+<div class="pub-venue">arXiv preprint, 2025</div>
+<div class="pub-links">
+<a href="https://arxiv.org/pdf/2510.21815" rel="noopener" target="_blank">arXiv</a>
+<div class="pub-desc" style="color: var(--meta); font-size: 14px;">
+           Developed an unsupervised deep learning framework for reconstructing high dynamic range (HDR) images from multi-exposure inputs without requiring ground-truth HDR supervision. Proposed a novel loss function that combines structural and perceptual quality measures to improve reconstruction quality.
+   
+</div>
+</div>
+</section>
+<section id="projects">
+<h2>Research &amp; Industrial Projects</h2>
+<h3 style="margin-top:20px;">Research Projects</h3>
+<div class="project">
+    <div class="project-header">
+        <div class="project-title">U-FNO: Fourier Neural Operators for Robust Domain Adaptation</div>
+        <div class="project-date">2025–2026</div>
+    </div>
+
+    <p class="project-desc">
+        Developed U-FNO, a Fourier Neural Operator-based architecture for robust domain adaptation in bearing fault diagnosis under sensor and operating-condition shifts. The model combines spectral learning, multi-scale feature extraction, and CORAL-based feature alignment to improve cross-domain generalization while requiring only limited target-domain labels.
+    </p>
+</div>
+<div class="project">
+<div class="project-header">
+<div class="project-title">Domain Adaptation for Machine Health Monitoring</div>
+<div class="project-date">Atlas Copco · 2024 – Present</div>
+</div>
+<p class="project-desc">
+Developing robust machine learning methods for machine health monitoring under changing operating conditions. The work focuses on improving cross-domain generalization, model reliability, and data-efficient adaptation for industrial diagnostic systems.
+</p>
+</div>
+<div class="project">
+<div class="project-header">
+<div class="project-title">AI-based Aerodynamic Design Optimization</div>
+<div class="project-date">Atlas Copco · 2024 – 2025</div>
+</div>
+<p class="project-desc">
+Developing scientific machine learning and surrogate modeling techniques for engineering design optimization. The project focuses on accelerating computational design workflows through data-driven optimization and efficient exploration of complex design spaces.
+</p>
+</div>
+<div class="project">
+<div class="project-header">
+<div class="project-title">Speed Estimation of a Compressor from Vibration Data</div>
+<div class="project-date">Atlas Copco · 2022 – 2023</div>
+</div>
+<p class="project-desc">
+Developed machine learning models for estimating compressor operating conditions from vibration signals. The work involved signal processing, feature engineering, and deep learning techniques for reliable industrial condition monitoring.
+</p>
+</div>
+<div class="project">
+<div class="project-header">
+<div class="project-title">Lubricant Level Estimation Using CNNs on Audio Signals</div>
+<div class="project-date">Atlas Copco · 2023</div>
+</div>
+<p class="project-desc">
+Developed deep learning methods for estimating lubricant levels from acoustic measurements. The project explored robust feature learning and predictive modeling for non-invasive industrial monitoring applications.
+</p>
+</div>
+<div class="project">
+<div class="project-header">
+<div class="project-title">HDR Image Reconstruction (M.Tech Thesis)</div>
+<div class="project-date">IISc · 2021 – 2022</div>
+</div>
+<p class="project-desc">
+          Developed an unsupervised deep-learning framework that reconstructs HDR images from multi-exposure
+          inputs without ground-truth supervision. Introduced a custom loss combining structural and
+          perceptual quality measures, improving MEF-SSIM over the baseline. Resulted in an
+          <a href="https://arxiv.org/pdf/2510.21815" rel="noopener" target="_blank">arXiv preprint</a>.
+        </p>
+</div>
+<div class="project"><div class="project-header"><div class="project-title">
+<h3 style="margin-top:30px;">Academic Projects</h3>
+Facial Emotion Recognition</div><div class="project-date">IISc · 2021</div></div><p class="project-desc">Developed facial emotion recognition models using AlexNet feature extraction and SVM classification on JAFFE, AFED and FER datasets while exploring transfer learning and cross-dataset generalization.</p></div><div class="project"><div class="project-header"><div class="project-title">Image Classification &amp; Segmentation</div><div class="project-date">IISc</div></div><p class="project-desc">Implemented image classification using CNN features (AlexNet, ResNet) and compared Normalized Cuts with Fully Convolutional Networks for semantic image segmentation.</p></div><div class="project"><div class="project-header"><div class="project-title">Image Restoration &amp; Compression</div><div class="project-date">IISc</div></div><p class="project-desc">Worked on BM3D denoising, wavelet denoising, JPEG compression, perceptual quality metrics (SSIM and LPIPS), and image enhancement techniques.</p></div><div class="project"><div class="project-header"><div class="project-title">SIFT Feature Detection</div><div class="project-date">IISc</div></div><p class="project-desc">Implemented Scale-Invariant Feature Transform (SIFT) and analyzed feature robustness under scale, rotation, blur and noise.</p></div><div class="project"><div class="project-header"><div class="project-title">Fuzzy Directional Weighted Median Filter</div><div class="project-date">JNTU Kakinada · 2020</div></div><p class="project-desc">Designed a fuzzy logic-based impulse noise removal algorithm that preserved image edges while outperforming conventional median filtering techniques.</p></div></section>
+<section id="experience">
+<h2>Experience</h2>
+<div class="row">
+<div class="row-main">
+<strong>Senior Data Scientist</strong>
+<span class="sub">Atlas Copco (India), Pune — Machine Learning, Computer Vision, Optimization</span>
+</div>
+<div class="row-date">2022 – Present</div>
+</div>
+<div class="row">
+<div class="row-main">
+<strong>Graduate Researcher</strong>
+<span class="sub">Indian Institute of Science, Bangalore — Signal Processing, Deep Learning, Computer Vision</span>
+</div>
+<div class="row-date">2020 – 2022</div>
+</div>
+<div class="row">
+<div class="row-main">
+<strong>Undergraduate Researcher</strong>
+<span class="sub">JNTU Kakinada — Image Processing, Fuzzy Systems, ECE Fundamentals</span>
+</div>
+<div class="row-date">2016 – 2020</div>
+</div>
+</section>
+<section class="contact" id="contact">
+<h2>Contact</h2>
+<p>
+        The fastest way to reach me is by
+        <a href="mailto:nagaswethak@alum.iisc.ac.in">email</a>. My CV is available
+        <a href="CV_Kumbha_Nagaswetha.pdf" rel="noopener" target="_blank">here</a>.
+      </p>
+</section>
+</div>
+</body>
+</html>
